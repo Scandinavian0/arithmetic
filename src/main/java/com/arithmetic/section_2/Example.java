@@ -24,7 +24,7 @@ public abstract class Example {
         a[j]=t;
     }
 
-    private static void show(Comparable[] a){
+    static void show(Comparable[] a){
         for (int i=0;i<a.length;i++){
             StdOut.print(a[i]+"");
         }
