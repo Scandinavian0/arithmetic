@@ -1,11 +1,13 @@
-package com.arithmetic.section_2;
+package com.arithmetic.section_2_1;
+
+import com.arithmetic.Example;
 
 /**
  * @Description: 选择排序
  * @Date: 2022/3/21
  * @Author: Everglow
  */
-public class Selection extends Example{
+public class Selection extends Example {
     public static void sort(Comparable[] a){
         int N=a.length;
         for (int i=0;i<N;i++){

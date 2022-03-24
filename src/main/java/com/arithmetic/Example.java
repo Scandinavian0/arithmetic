@@ -1,6 +1,5 @@
-package com.arithmetic.section_2;
+package com.arithmetic;
 
-import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
@@ -14,11 +13,11 @@ public abstract class Example {
 
     public  static  void sort(Comparable[] a){};
 
-    static boolean less(Comparable v, Comparable w){
+    public  static boolean less(Comparable v, Comparable w){
         return v.compareTo(w)<0;
     }
 
-    static void exch(Comparable[] a, int i, int j){
+    public static void exch(Comparable[] a, int i, int j){
         Comparable t=a[i];
         a[i]=a[j];
         a[j]=t;
@@ -38,6 +37,8 @@ public abstract class Example {
         }
         return true;
     }
+
+
 
     public static void main(String[] args) {
         String[] a= StdIn.readAllStrings();

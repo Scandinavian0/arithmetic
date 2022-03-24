@@ -1,4 +1,6 @@
-package com.arithmetic.section_2;
+package com.arithmetic.section_2_1;
+
+import com.arithmetic.Example;
 
 /**
  * @Description: 希尔排序
