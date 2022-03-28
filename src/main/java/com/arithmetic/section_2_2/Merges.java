@@ -34,7 +34,9 @@ public class Merges extends Example {
         if (hi <= lo) return;
         int mid = lo + (hi - lo) / 2;
         // 递归
+        // 第一个子数组
         sort(a, lo, mid);
+        // 第二个子数组
         sort(a, mid + 1, hi);
         merge(a, lo, mid, hi);
     }
