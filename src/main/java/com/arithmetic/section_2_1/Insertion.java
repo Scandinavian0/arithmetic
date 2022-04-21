@@ -22,6 +22,6 @@ public class Insertion extends Example {
     public static void main(String[] args) {
         String[] a = {"1", "2", "3", "5","4", "6", "7", "9", "8"};
         sort(a);
-        show(a);
+//        show(a);
     }
 }
