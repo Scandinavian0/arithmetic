@@ -11,16 +11,19 @@ import edu.princeton.cs.algs4.StdOut;
 public abstract class Example {
 //    private static boolean  ;
 
-    public  static  void sort(Comparable[] a){};
-
-    public  static boolean less(Comparable v, Comparable w){
-        return v.compareTo(w)<0;
+    public static void sort(Comparable[] a) {
     }
 
-    public static void exch(Comparable[] a, int i, int j){
-        Comparable t=a[i];
-        a[i]=a[j];
-        a[j]=t;
+    ;
+
+    public static boolean less(Comparable v, Comparable w) {
+        return v.compareTo(w) < 0;
+    }
+
+    public static void exch(Comparable[] a, int i, int j) {
+        Comparable t = a[i];
+        a[i] = a[j];
+        a[j] = t;
     }
 
     private static Comparable[] aux; // 归并所需的辅助函数
@@ -31,39 +34,39 @@ public abstract class Example {
             aux[k] = a[k];
         }
         for (int k = lo; k <= hi; k++) {
-            if (i > mid)                    a[k] = aux[j++];
-            else if (j > hi)                a[k] = aux[i++];
-            else if (less(aux[j], aux[i]))  a[k] = aux[j++];
-            else                            a[k] = aux[i++];
+            if (i > mid) a[k] = aux[j++];
+            else if (j > hi) a[k] = aux[i++];
+            else if (less(aux[j], aux[i])) a[k] = aux[j++];
+            else a[k] = aux[i++];
         }
     }
 
-    static void show(Comparable[] a){
-    protected static void show(Comparable[] a){
-        for (int i=0;i<a.length;i++){
-            StdOut.print(a[i]+"");
-        }
-        StdOut.print();
-    }
+//    static class  void show(Comparable[] a) {
+//        public static void show; (Comparable[] a){
+//            for (int i = 0; i < a.length; i++) {
+//                StdOut.print(a[i] + "");
+//            }
+//            StdOut.print();
+//        }
+//    }
 
-    public static boolean isSorted(Comparable[] a){
+    public static boolean isSorted(Comparable[] a) {
         // 测试数组是否有序
-        for (int i=1;i<a.length;i++){
-            if (less(a[i],a[i-1])) return false;
+        for (int i = 1; i < a.length; i++) {
+            if (less(a[i], a[i - 1]))
+                return false;
         }
         return true;
     }
 
-
     public static void main(String[] args) {
         System.out.println(args[0]);
-        String[] a= StdIn.readAllStrings();
+        String[] a = StdIn.readAllStrings();
         sort(a);
         System.out.println(a);
 //        assert isSorted(a);
-        show(a);
+//        show(a);xxxx
 
         System.out.println(args[0]);
     }
-
 }
