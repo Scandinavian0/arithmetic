@@ -23,7 +23,7 @@ public abstract class Example {
         a[j]=t;
     }
 
-    static void show(Comparable[] a){
+    protected static void show(Comparable[] a){
         for (int i=0;i<a.length;i++){
             StdOut.print(a[i]+"");
         }
@@ -39,13 +39,15 @@ public abstract class Example {
     }
 
 
-
     public static void main(String[] args) {
+        System.out.println(args[0]);
         String[] a= StdIn.readAllStrings();
         sort(a);
         System.out.println(a);
-        assert isSorted(a);
+//        assert isSorted(a);
         show(a);
+
+        System.out.println(args[0]);
     }
 
 }
